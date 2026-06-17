@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon Zeïer — Compositeur & Sound Designer</title>
+  <meta name="description" content="Simon Zeïer, compositeur de musique à l'image et sound designer basé à Genève. Bandes sonores pour films, jeux vidéo et médias visuels.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syncopate:wght@400;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="24" cy="24" r="23" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
+        <circle cx="24" cy="24" r="19" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="0.5"/>
+        <text x="24" y="31" font-family="'Syncopate', sans-serif" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="-0.5">SZ</text>
+      </svg>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#work">Travaux</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-burger" aria-label="Menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile" id="navMobile">
+    <ul>
+      <li><a href="#about" onclick="toggleMenu()">À propos</a></li>
+      <li><a href="#work" onclick="toggleMenu()">Travaux</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="grain"></div>
+      <div class="hero-lines">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="waveform">
+        <svg viewBox="0 0 1400 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <polyline id="wave" points="" fill="none" stroke="rgba(180,140,80,0.25)" stroke-width="1.5"/>
+        </svg>
+      </div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Compositeur · Sound Designer</p>
+      <h1 class="hero-name">Simon<br><em>Zeïer</em></h1>
+      <p class="hero-tagline">Musique & effets sonores<br>pour médias visuels</p>
+      <a href="#work" class="hero-cta">Découvrir mon univers</a>
+    </div>
+    <div class="hero-scroll">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-label">
+        <span class="section-num">01</span>
+        <span class="section-title">À propos</span>
+      </div>
+      <div class="about-text">
+        <h2>Passionné par les sons<br>et les émotions<br><em>qu'ils véhiculent</em></h2>
+        <div class="about-body">
+          <p>Compositeur franco-suisse de musique à l'image, Simon Zeïer est spécialisé dans la création de bandes sonores pour films, jeux vidéo et autres médias visuels. Doté d'un style unique, il combine des sonorités synthétiques profondes avec des influences variées, offrant une expérience auditive immersive et inoubliable.</p>
+          <p>Originaire de l'univers du Metal en tant que guitariste, Simon a su transcender les genres pour explorer de nouvelles dimensions sonores et a par la suite appris le piano, élargissant ainsi son champ de compétences musicales. Son expertise ne se limite pas aux compositions musicales : il a également fabriqué des effets sonores pour la comédie musicale <em>« Au Service Secret de la Confédération »</em>, présentée à l'Auditorium Ansermet, avec 13 représentations du 15 au 28 avril 2024. Il a ensuite spatialisé ces effets pour une diffusion immersive, prouvant sa capacité à manipuler l'espace sonore avec finesse et créativité.</p>
+          <p>Diplômé de l'<strong>École des Musiques Actuelles (EMA)</strong> de Genève, où il a suivi une formation de deux ans dans la Filière Préprofessionnelle en Production, Simon a acquis des compétences techniques et artistiques solides — maîtrisant la MAO et la production de musiques actuelles. Il a également étudié pendant 3 ans avec <a href="https://www.emmanuelfratianni.com/" target="_blank" rel="noopener">Emmanuel Fratianni</a>, chef d'orchestre et compositeur de renommée internationale, directeur musical de <em>Video Games Live</em> — une collaboration qui a considérablement enrichi ses perspectives musicales et techniques.</p>
+          <p>En tant que compositeur, Simon aspire à créer des bandes sonores qui non seulement accompagnent les images, mais qui ajoutent une dimension supplémentaire à l'histoire, engageant les spectateurs dans une expérience sensorielle complète.</p>
+        </div>
+        <div class="about-tags">
+          <span>Composition orchestrale</span>
+          <span>Sound Design</span>
+          <span>MAO</span>
+          <span>Spatialisation sonore</span>
+          <span>Musique à l'image</span>
+          <span>Jeux vidéo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAVAUX -->
+  <section id="work">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <span class="section-title">Travaux</span>
+      <h2>Compositions & <em>Effets sonores</em></h2>
+    </div>
+
+    <!-- SOUS-SECTION : COMPOSITIONS -->
+    <div class="subsection-label">
+      <span class="subsection-line"></span>
+      <span class="subsection-title">Compositions</span>
+      <span class="subsection-line"></span>
+    </div>
+    <div class="music-grid">
+      <div class="video-wrap">
+        <div class="video-label">Composition I</div>
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/SgcDSCGcK_8"
+            title="Simon Zeïer - Composition"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+      <div class="video-wrap">
+        <div class="video-label">Composition II</div>
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/DYUPGWwrhkw"
+            title="Simon Zeïer - Composition"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+    <p class="music-more">
+      <a href="https://www.youtube.com/@simonzeier1379" target="_blank" rel="noopener" class="link-arrow">Voir toutes mes compositions →</a>
+    </p>
+
+    <!-- SOUS-SECTION : EFFETS SONORES -->
+    <div class="subsection-label" style="margin-top: clamp(48px, 7vw, 96px);">
+      <span class="subsection-line"></span>
+      <span class="subsection-title">Effets sonores</span>
+      <span class="subsection-line"></span>
+    </div>
+    <div class="work-grid">
+
+      <div class="work-card">
+        <div class="work-img-wrap">
+          <img src="images/tgs_lympa.jpg" alt="The Greatest Showman - LYMPA" loading="lazy">
+          <div class="work-overlay">
+            <span class="work-type">Concert spectaculaire · LYMPA</span>
+          </div>
+        </div>
+        <div class="work-info">
+          <h3>The Greatest Showman</h3>
+          <p>Comédie musicale produite par LYMPA au Bâtiment des Forces Motrices, Genève. Septembre 2025.</p>
+          <span class="work-tag">Effets sonores</span>
+          <span class="work-tag">Comédie musicale</span>
+          <span class="work-tag">Genève</span>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <div class="work-img-wrap">
+          <img src="images/tick_tick_boom.jpg" alt="Tick Tick Boom - LYMPA" loading="lazy">
+          <div class="work-overlay">
+            <span class="work-type">Comédie musicale immersive · LYMPA</span>
+          </div>
+        </div>
+        <div class="work-info">
+          <h3>Tick, Tick… BOOM!</h3>
+          <p>Comédie musicale produite par LYMPA aux 6 Toits, Genève. Août 2024.</p>
+          <span class="work-tag">Effets sonores</span>
+          <span class="work-tag">Comédie musicale</span>
+          <span class="work-tag">Genève</span>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <div class="work-img-wrap">
+          <img src="images/au_service_secret.jpg" alt="Au Service Secret de la Confédération" loading="lazy">
+          <div class="work-overlay">
+            <span class="work-type">Sound Design · Spatialisation immersive</span>
+          </div>
+        </div>
+        <div class="work-info">
+          <h3>Au Service Secret<br>de la Confédération</h3>
+          <p>Conception et spatialisation des effets sonores pour cette comédie musicale 100% Suisse — 13 représentations à l'Auditorium Ansermet, Genève. Avril 2024.</p>
+          <span class="work-tag">Effets sonores</span>
+          <span class="work-tag">Performance live</span>
+          <span class="work-tag">Spatialisation</span>
+          <span class="work-tag">Comédie musicale</span>
+          <span class="work-tag">Genève</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <span class="section-title">Contact</span>
+        <h2>Travaillons <em>ensemble</em></h2>
+      </div>
+      <p class="contact-intro">Un projet de film, jeu vidéo, comédie musicale ou autre média visuel ? Je serais ravi d'en discuter.</p>
+
+      <form class="contact-form" id="contactForm">
+        <input type="hidden" name="access_key" value="d059bad9-7490-421c-a633-9e317e3a3411">
+        <input type="hidden" name="subject" value="Nouveau message — Portfolio Simon Zeïer">
+        <input type="checkbox" name="botcheck" style="display:none">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" required placeholder="Votre nom">
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="votre@email.com">
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="subject_field">Sujet</label>
+          <input type="text" id="subject_field" name="subject_field" placeholder="Film, jeu vidéo, comédie musicale…">
+        </div>
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Décrivez votre projet…"></textarea>
+        </div>
+        <button type="submit" class="btn-send" id="submitBtn">
+          <span>Envoyer le message</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+        <p id="formMsg" style="display:none; margin-top:1rem; font-family:'DM Sans',sans-serif; font-size:0.9rem;"></p>
+      </form>
+
+      <div class="contact-direct">
+        <a href="mailto:simonzeiercomposer@gmail.com" class="contact-email">simonzeiercomposer@gmail.com</a>
+        <a href="https://www.instagram.com/simonz74z" target="_blank" rel="noopener" class="contact-social" aria-label="Instagram">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo">Simon Zeïer</span>
+      <span class="footer-copy">© 2026 — Compositeur & Sound Designer</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formMsg = document.getElementById('formMsg');
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.querySelector('span').textContent = 'Envoi en cours…';
+
+      const data = Object.fromEntries(new FormData(form));
+
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        const json = await res.json();
+
+        if (json.success) {
+          formMsg.style.color = 'rgba(255,255,255,0.7)';
+          formMsg.textContent = 'Message envoyé. Merci, je vous répondrai rapidement.';
+          form.reset();
+        } else {
+          formMsg.style.color = '#e07070';
+          formMsg.textContent = 'Une erreur est survenue. Veuillez réessayer ou m\'écrire directement par email.';
+        }
+      } catch (err) {
+        formMsg.style.color = '#e07070';
+        formMsg.textContent = 'Une erreur est survenue. Veuillez réessayer ou m\'écrire directement par email.';
+      }
+
+      formMsg.style.display = 'block';
+      submitBtn.disabled = false;
+      submitBtn.querySelector('span').textContent = 'Envoyer le message';
+    });
+  </script>
+</body>
+</html>
