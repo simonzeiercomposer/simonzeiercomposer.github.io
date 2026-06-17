@@ -257,41 +257,34 @@
 
   <script src="script.js"></script>
   <script>
-    const form = document.getElementById('contactForm');
-    const submitBtn = document.getElementById('submitBtn');
-    const formMsg = document.getElementById('formMsg');
-
-    form.addEventListener('submit', async function(e) {
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
       e.preventDefault();
-      submitBtn.disabled = true;
-      submitBtn.querySelector('span').textContent = 'Envoi en cours…';
-
-      const data = Object.fromEntries(new FormData(form));
-
+      const btn = document.getElementById('submitBtn');
+      const msg = document.getElementById('formMsg');
+      btn.disabled = true;
+      btn.querySelector('span').textContent = 'Envoi en cours…';
+      msg.style.display = 'none';
       try {
         const res = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify(data)
+          body: new FormData(this)
         });
         const json = await res.json();
-
         if (json.success) {
-          formMsg.style.color = 'rgba(255,255,255,0.7)';
-          formMsg.textContent = 'Message envoyé. Merci, je vous répondrai rapidement.';
-          form.reset();
+          msg.style.color = 'rgba(255,255,255,0.7)';
+          msg.textContent = 'Message envoyé. Merci, je vous répondrai rapidement.';
+          this.reset();
         } else {
-          formMsg.style.color = '#e07070';
-          formMsg.textContent = 'Une erreur est survenue. Veuillez réessayer ou m\'écrire directement par email.';
+          msg.style.color = '#e07070';
+          msg.textContent = json.message || 'Une erreur est survenue. Veuillez réessayer.';
         }
       } catch (err) {
-        formMsg.style.color = '#e07070';
-        formMsg.textContent = 'Une erreur est survenue. Veuillez réessayer ou m\'écrire directement par email.';
+        msg.style.color = '#e07070';
+        msg.textContent = "Une erreur est survenue. Écrivez-moi directement par email.";
       }
-
-      formMsg.style.display = 'block';
-      submitBtn.disabled = false;
-      submitBtn.querySelector('span').textContent = 'Envoyer le message';
+      msg.style.display = 'block';
+      btn.disabled = false;
+      btn.querySelector('span').textContent = 'Envoyer le message';
     });
   </script>
 </body>
