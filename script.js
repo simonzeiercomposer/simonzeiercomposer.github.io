@@ -54,34 +54,7 @@ document.querySelectorAll('.work-card, .video-wrap, .about-text, .about-visual, 
   revealObserver.observe(el);
 });
 
-// Contact form feedback
-const form = document.querySelector('.contact-form');
-if (form) {
-  form.addEventListener('submit', function(e) {
-    const btn = form.querySelector('.btn-send span');
-    btn.textContent = 'Envoi en cours…';
-  });
-}
 
-// Show status message after form submission
-const params = new URLSearchParams(window.location.search);
-const status = params.get('status');
-if (status === 'success') {
-  const msg = document.createElement('div');
-  msg.style.cssText = 'position:fixed;bottom:32px;right:32px;z-index:999;background:#0f0e0c;border:1px solid rgba(100,80,255,0.4);color:#b48c50;font-family:"Syncopate",sans-serif;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;padding:16px 24px;';
-  msg.textContent = 'Message envoyé ✓';
-  document.body.appendChild(msg);
-  setTimeout(() => msg.remove(), 5000);
-  // Nettoyer l'URL
-  history.replaceState({}, '', window.location.pathname);
-} else if (status === 'error') {
-  const msg = document.createElement('div');
-  msg.style.cssText = 'position:fixed;bottom:32px;right:32px;z-index:999;background:#0f0e0c;border:1px solid rgba(200,60,60,0.4);color:#c84040;font-family:"Syncopate",sans-serif;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;padding:16px 24px;';
-  msg.textContent = 'Erreur — réessayez';
-  document.body.appendChild(msg);
-  setTimeout(() => msg.remove(), 5000);
-  history.replaceState({}, '', window.location.pathname);
-}
 
 
 // Spectrum visualizer
